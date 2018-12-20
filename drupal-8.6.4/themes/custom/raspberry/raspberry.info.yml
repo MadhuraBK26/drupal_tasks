@@ -1,0 +1,15 @@
+name: raspberry
+description: An example Custom theme
+type: theme
+core: 8.x
+screenshot: screenshot.jpg
+
+regions:
+  brand: Site Branding
+  header: Header
+  top: Top
+  content: Content
+  bottom: Bottom
+  sidebar: Sidebar
+  footer: Footer
+  navbar_right_notifications: Navbar Right Notifications

@@ -1,0 +1,8 @@
+name: Custom fields example
+type: module
+description: 'Demonstrates different field types'
+package: Custom
+core: 8.x
+version: 1.0
+dependencies:
+  - field
