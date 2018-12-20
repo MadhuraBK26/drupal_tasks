@@ -1,0 +1,5 @@
+name: Insert subscription
+type: module
+description: Insert node to custom table based on content type
+core: 8.x
+package: Custom

@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_ENTITY_TYPE_insert() for node entities.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+
+function insert_subscription_node_insert(EntityInterface $node) {
+	$service = \Drupal::service('insert_subscription.insert_subscription');
+	$callService = $service->insertValues($node);
+}

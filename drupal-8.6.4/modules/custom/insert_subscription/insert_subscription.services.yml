@@ -1,0 +1,3 @@
+services:
+  insert_subscription.insert_subscription:
+    class: Drupal\insert_subscription\InsertSubscription
