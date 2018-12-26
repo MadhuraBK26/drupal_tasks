@@ -16,11 +16,12 @@ class InsertSubscription implements InsertSubscriptionInterface  {
         $connection = \Drupal::service('database');
         if ($node->bundle() == 'daily_subscription')
         {
+           
         	$nodeId = $node->nid->getValue();
         	$getNodeId = $nodeId[0]['value'];
          	$subscription = $node->field_subsc_daily->getValue();
             $getDailySubscription = $subscription[0]['daily'];
-    	    $connection->insert('subscription')
+    	    $connection->insert('insert_subscription')
     	               ->fields([
     	                 'entity_id' => $getNodeId,
     	                 'daily_subscription' => $getDailySubscription,
@@ -44,7 +45,7 @@ class InsertSubscription implements InsertSubscriptionInterface  {
         	}
 
         	$getJsonArray = json_encode($array);
-        	$connection->insert('subscription')
+        	$connection->insert('insert_subscription')
     	               ->fields([
     	                 'entity_id' => $getNodeId,
     	                 'daily_subscription' => null,

@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_schema().
+ *
+ * Defines the database tables used by this module.
+ *
+ * @see hook_schema()
+ *
+ */
+function insert_subscription_schema() {
+  $schema['insert_subscription'] = [
+    'description' => 'Stores daily and weekly subscription data',
+    'fields' => [
+      'entity_id' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'Entity Id.',
+      ],
+      'daily_subscription' => [
+        'type' => 'int',
+        'not null' => FALSE,
+        'description' => "Daily subscription",
+      ],
+      'weekly_subscription' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => 'Weekly subscription',
+      ],
+    ],
+  ];
+
+  return $schema;
+}
