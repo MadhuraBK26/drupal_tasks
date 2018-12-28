@@ -1,0 +1,5 @@
+name: Subscription Event
+type: module
+description: On cron run,log message based on node type
+core: 8.x
+package: Custom

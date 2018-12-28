@@ -1,0 +1,10 @@
+<?php
+use Drupal\subscription_event\Event\GetSubscription;
+
+/**
+ * Implements hook_cron().
+ */
+function subscription_event_cron() {
+  	\Drupal::service('event_dispatcher')
+           ->dispatch(GetSubscription::LOG_EVENT,new GetSubscription());
+ }

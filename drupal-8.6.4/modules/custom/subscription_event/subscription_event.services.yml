@@ -1,0 +1,5 @@
+services:
+  subscription_event.log_message:
+    class: Drupal\subscription_event\EventSubscriber\LogMessage
+    tags:
+      - { name: event_subscriber }
